@@ -1,4 +1,4 @@
-# 🖥️ Windows 11 Secure Deployment Media on Verified UEFI Platform  
+# 🖥️ Lab-002: Windows 11 Secure Deployment Media on Verified UEFI Platform
 *(Rufus Lab)*
 
 ## 📌 Overview
