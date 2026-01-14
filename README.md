@@ -1,8 +1,7 @@
 🖥️ Windows 11 Deployment & Recovery USB (Rufus Lab)
 📌 Overview
 
-This project documents the creation of a Windows 11 deployment and recovery USB using Rufus.
-It simulates how enterprise IT teams prepare bootable media to provision, recover, and secure endpoints in environments where hardware, security controls, and OS integrity matter.
+This project documents the creation of a Windows 11 deployment and recovery USB using Rufus. It simulates how enterprise IT teams prepare bootable media to provision, recover, and secure endpoints in environments where hardware trust, security controls, and OS integrity matter.
 
 The USB created in this lab supports:
 
@@ -14,12 +13,11 @@ UEFI and legacy boot environments
 
 Recovery, repair, and troubleshooting workflows
 
-This is the same class of tooling used by helpdesks, MSPs, hospitals, and government contractors when reimaging or recovering machines in regulated environments.
+This is the same class of tooling used by help desks, MSPs, hospitals, and government contractors when reimaging or recovering machines in regulated environments.
 
 🎯 What This Lab Demonstrates
 
-This is not just a Windows installer.
-It demonstrates endpoint control — the foundation of security, identity, and enterprise IT.
+This is not just a Windows installer. It demonstrates endpoint control — the foundation of security, identity, and enterprise IT.
 
 Key skills shown:
 
@@ -39,8 +37,8 @@ These map directly to Tier 1–2 IT, SOC, and IAM-adjacent workflows.
 Tool	Purpose
 Rufus	Creates bootable USB media from Windows ISO
 Windows 11 ISO	Operating system deployment image
-UEFI Firmware	Modern boot environment
-TPM/Secure Boot bypass	Allows recovery or installation on non-compliant systems
+UEFI Firmware	Modern secure boot environment
+TPM & Secure Boot bypass	Allows recovery or installation on non-compliant systems
 🧪 Lab Scenario
 
 This lab simulates a real-world IT situation:
@@ -65,8 +63,7 @@ Deploy Windows consistently across mixed hardware
 
 🔐 Why This Matters (IAM & Security Angle)
 
-Before users authenticate… before accounts exist…
-control of the boot process determines who owns the machine.
+Before users authenticate — before accounts even exist — control of the boot process determines who owns the machine.
 
 This lab shows:
 
@@ -83,13 +80,13 @@ That is the first layer of Identity and Access Management.
 If you control the boot media, you control the endpoint.
 
 📁 Repository Contents
-
 /screenshots
-  ├── Rufus configuration
-  ├── ISO selection
-  ├── TPM & Secure Boot bypass
-  ├── UEFI boot mode
-  └── Successful media creation
+ ├── 01_iso-selection.png
+ ├── 02_rufus-config.png
+ ├── 03_tpm-secureboot-bypass.png
+ ├── 04_uefi-boot-mode.png
+ ├── 05_usb-writing.png
+ └── 06_successful-media.png
 
 README.md
 
@@ -104,3 +101,5 @@ Secure OS provisioning
 Troubleshooting and recovery tooling
 
 Enterprise-style endpoint preparation
+
+
