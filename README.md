@@ -1,120 +1,106 @@
-🛡️ Windows 11 Secure Deployment & Recovery Media (Rufus)
-Overview
+🖥️ Windows 11 Deployment & Recovery USB (Rufus Lab)
+📌 Overview
 
-This project documents the creation of enterprise-grade Windows 11 deployment and recovery media using Rufus and an official Microsoft ISO, validated on a modern UEFI-secured AMD platform.
+This project documents the creation of a Windows 11 deployment and recovery USB using Rufus.
+It simulates how enterprise IT teams prepare bootable media to provision, recover, and secure endpoints in environments where hardware, security controls, and OS integrity matter.
 
-The goal is to demonstrate secure endpoint provisioning, identity control, and recovery readiness — the same skills used in SOC, IAM, and government-regulated IT environments.
+The USB created in this lab supports:
 
-🎯 Objectives
+Clean Windows 11 installations
 
-Build trusted Windows 11 installation media
+Hardware requirement bypass (TPM, Secure Boot, RAM, CPU)
 
-Bypass forced cloud identity for local account control
+UEFI and legacy boot environments
 
-Enable deployment on legacy or lab hardware
+Recovery, repair, and troubleshooting workflows
 
-Validate hardware and firmware security posture
+This is the same class of tooling used by helpdesks, MSPs, hospitals, and government contractors when reimaging or recovering machines in regulated environments.
 
-Prepare for incident response & offline recovery
+🎯 What This Lab Demonstrates
 
-🧰 Tools Used
+This is not just a Windows installer.
+It demonstrates endpoint control — the foundation of security, identity, and enterprise IT.
+
+Key skills shown:
+
+Boot media creation for modern UEFI systems
+
+OS deployment and re-provisioning
+
+Hardware compatibility remediation
+
+Recovery and troubleshooting access
+
+Secure endpoint initialization
+
+These map directly to Tier 1–2 IT, SOC, and IAM-adjacent workflows.
+
+🛠️ Tools Used
 Tool	Purpose
-Rufus 4.11	Create bootable Windows deployment media
-Windows 11 25H2 ISO (x64)	Official Microsoft installation image
-ASUS UEFI BIOS	Firmware-level security and boot validation
-AMD Ryzen 5 7600X3D Platform	Secure, modern hardware baseline
-📦 ISO Supply Chain Verification
+Rufus	Creates bootable USB media from Windows ISO
+Windows 11 ISO	Operating system deployment image
+UEFI Firmware	Modern boot environment
+TPM/Secure Boot bypass	Allows recovery or installation on non-compliant systems
+🧪 Lab Scenario
 
-The installation media was created using the official Microsoft ISO:
+This lab simulates a real-world IT situation:
 
-Win11_25H2_EnglishInternational_x64.iso
+A Windows system must be reinstalled or recovered on hardware that may not meet Windows 11 requirements, while still maintaining control over boot and OS provisioning.
 
-Architecture: x64 (Intel/AMD)
+Using Rufus, the USB was configured to:
 
-Version: Windows 11 25H2
+Bypass Windows 11 hardware checks
 
-Size: ~7.5 GB
+Support UEFI booting
 
-This ensures a trusted, malware-free OS image was used.
+Allow technician-level OS installation and recovery
 
-📸 Screenshot: ISO file name and size
+This enables IT staff to:
 
-🛠 Rufus Deployment Configuration
+Reimage failed systems
 
-Rufus was configured for modern secure systems:
+Recover from corrupted OS installs
 
-Partition scheme: GPT
+Deploy Windows consistently across mixed hardware
 
-Target system: UEFI (non-CSM)
+🔐 Why This Matters (IAM & Security Angle)
 
-File system: NTFS
+Before users authenticate… before accounts exist…
+control of the boot process determines who owns the machine.
 
-Image: Standard Windows Installation
+This lab shows:
 
-This produces UEFI-bootable, enterprise-compatible installation media.
+Who can boot
 
-📸 Screenshot: Rufus main configuration screen
+Who can install
 
-🔓 Windows Security & Identity Overrides
+Who can recover
 
-Rufus Windows User Experience options were used to enable enterprise-style control:
+Who controls the OS
 
-Remove TPM / Secure Boot requirement
+That is the first layer of Identity and Access Management.
 
-Remove Microsoft account requirement
+If you control the boot media, you control the endpoint.
 
-Enable local administrator account creation
+📁 Repository Contents
 
-Disable forced telemetry
+/screenshots
+  ├── Rufus configuration
+  ├── ISO selection
+  ├── TPM & Secure Boot bypass
+  ├── UEFI boot mode
+  └── Successful media creation
 
-This allows:
+README.md
 
-Offline deployment
+🧠 Skills Demonstrated
 
-Lab and air-gapped installs
+Windows deployment workflows
 
-Full IAM control of local accounts
+Boot & firmware awareness (UEFI vs Legacy)
 
-📸 Screenshot: Rufus “Customize Windows Installation” options
+Secure OS provisioning
 
-💽 Boot Media Validation
+Troubleshooting and recovery tooling
 
-After creation, the USB was verified to contain:
-
-/boot  
-/efi  
-/sources  
-setup.exe  
-bootmgr.efi
-
-
-This confirms the drive is fully bootable and UEFI-compliant.
-
-📸 Screenshot: USB contents
-
-🔐 Firmware & Hardware Trust Verification
-
-The host system used to build this media was validated in UEFI BIOS:
-
-Security Features Enabled
-
-Secure Boot: Windows UEFI Mode
-
-NX (No-Execute): Enabled
-
-SVM (Virtualization): Enabled
-
-PSS: Enabled
-
-These support:
-
-Credential Guard
-
-Virtualization-based Security (VBS)
-
-Exploit mitigation
-
-Secure boot chains
-
-📸 Screenshot: CPU configuration (NX, SVM, PSS)
-📸 Screenshot: Secure Boot configuration
+Enterprise-style endpoint preparation
