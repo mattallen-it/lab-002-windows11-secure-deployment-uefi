@@ -42,23 +42,24 @@ This aligns directly with **Zero Trust** and **IAM-driven device onboarding**, w
 - Endpoint chain-of-trust
 - Audit-grade technical documentation
 
+---
 
-## 🧠 Threat Model (Why This Matters)
+## 🛡️ Threat Model (Why This Matters)
 
 Modern attackers do not just target Windows — they target the layers *below* it.
 
 This lab defends against:
 
-| Threat | Mitigation | Rogue re-imaging | Controlled USB enforces deployment integrity |
-
-|------|------------|
+| Threat | Mitigation |
+|-------|------------|
 | Bootkits & rootkits | UEFI Secure Boot prevents unsigned bootloaders |
 | OS tampering | Verified ISO ensures trusted Windows image |
 | Firmware persistence | UEFI validation exposes unsafe boot paths |
 | Device spoofing | TPM & CPU security provide hardware identity |
 | Rogue re-imaging | Controlled USB enforces deployment integrity |
 
-In Zero Trust environments, **a device is not trusted just because it turns on** — it must prove:
+In Zero Trust environments, a device is not trusted just because it turns on — it must prove:
+
 - Firmware integrity  
 - Boot integrity  
 - OS integrity  
