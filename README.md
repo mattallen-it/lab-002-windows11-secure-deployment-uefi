@@ -49,7 +49,8 @@ Modern attackers do not just target Windows — they target the layers *below* i
 
 This lab defends against:
 
-| Threat | Mitigation |
+| Threat | Mitigation | Rogue re-imaging | Controlled USB enforces deployment integrity |
+
 |------|------------|
 | Bootkits & rootkits | UEFI Secure Boot prevents unsigned bootloaders |
 | OS tampering | Verified ISO ensures trusted Windows image |
