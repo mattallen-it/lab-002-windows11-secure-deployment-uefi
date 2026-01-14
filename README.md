@@ -33,6 +33,16 @@ This aligns directly with **Zero Trust** and **IAM-driven device onboarding**, w
 
 ---
 
+## 🧑‍💻 Skills Demonstrated
+
+- Secure OS deployment
+- UEFI & firmware validation
+- TPM & Secure Boot controls
+- Zero Trust device onboarding
+- Endpoint chain-of-trust
+- Audit-grade technical documentation
+
+
 ## 🧠 Threat Model (Why This Matters)
 
 Modern attackers do not just target Windows — they target the layers *below* it.
