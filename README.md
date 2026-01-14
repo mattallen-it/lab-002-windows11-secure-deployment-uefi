@@ -15,6 +15,25 @@ Recovery, repair, and troubleshooting workflows
 
 This is the same class of tooling used by help desks, MSPs, hospitals, and government contractors when reimaging or recovering machines in regulated environments.
 
+---
+
+## 🖼️ Secure Deployment Evidence
+
+This lab includes a full visual record of the Windows 11 secure deployment process — from ISO selection through firmware-level verification.
+
+| Step | Screenshot | What It Proves |
+|------|-----------|----------------|
+| ISO Selection | ![ISO](screenshots/01_iso-selection.png) | Trusted Windows image source |
+| Rufus Configuration | ![Rufus](screenshots/02_rufus-config.png) | Controlled provisioning parameters |
+| TPM & Secure Boot Bypass | ![TPM](screenshots/03_tpm-secureboot-bypass.png) | Policy override for legacy hardware |
+| UEFI Boot Mode | ![UEFI](screenshots/04_uefi-boot-mode.jpg) | Firmware-level boot security |
+| Media Ready | ![Ready](screenshots/05_rufus-ready.png) | Deployment chain-of-custody |
+| USB File Structure | ![USB](screenshots/06_usb-file-structure.png) | Boot integrity and OS layout |
+| CPU Security | ![CPU](screenshots/07_cpu-security.jpg) | Hardware root of trust |
+| Firmware Tools | ![FW](screenshots/08_firmware-tools.jpeg) | Platform security controls |
+
+---
+
 🎯 What This Lab Demonstrates
 
 This is not just a Windows installer. It demonstrates endpoint control — the foundation of security, identity, and enterprise IT.
